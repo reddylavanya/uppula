@@ -1,8 +1,10 @@
-function myFunction(){
-
-        
-    let a = document.getElementById("num1").value;
+function myFunction(input){
+side  = input;
+side = document.getElementById("num1").value;
+var area = parseInt(side) *parseInt(side);
+       
+alert("area is "+area);
     
-    let area = parseInt(a)*parseInt(a);
-    alert("Area of square is (side*side): "+area);
+    return area;
+   
     }
