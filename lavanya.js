@@ -2,7 +2,8 @@ function myFunction(input) {
     side = input;
     side = document.getElementById("num1").value;
     var area = parseInt(side) * parseInt(side);
-
+    localStorage.getItem('The area of the square is:',area)
+    localStorage.getItem('The side of the square:',side)
     alert("area is " + area);
     return area;
 
@@ -18,11 +19,11 @@ $(document).ready(function(){
     });
   });
   
-            function loadDoc() {
+            function verification() {
               var xhttp = new XMLHttpRequest();
               xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                  document.getElementById("hello").innerHTML =
+                  document.getElementById("demo").innerHTML =
                   this.responseText;
                 }
               };
