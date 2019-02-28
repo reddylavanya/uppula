@@ -2,13 +2,18 @@ function myFunction(input) {
     side = input;
     side = document.getElementById("num1").value;
     var area = parseInt(side) * parseInt(side);
-    localStorage.getItem('The area of the square is:',area)
-    localStorage.getItem('The side of the square:',side)
+    localStorage.setItem("value",area);
     alert("area is " + area);
     return area;
 
 }
 
+document.getElementById("clicker").addEventListener('click',function(){
+  document.getElementById("result").innerHTML=localStorage.getItem("value");
+})
+document.getElementById("wiper").addEventListener('click',function(){
+  localStorage.clear();
+})
 
 $(document).ready(function(){
     $("#hide").click(function(){
